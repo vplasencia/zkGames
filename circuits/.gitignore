@@ -1,0 +1,16 @@
+sudoku_cpp
+sudoku_js
+
+sudoku_0000.zkey
+sudoku_0001.zkey
+sudoku.r1cs
+sudoku.sym
+pot12_0000.ptau
+pot12_0001.ptau
+pot12_final.ptau
+proof.json
+public.json
+verification_key.json
+verifier.sol
+witness.wtns
+parameters.txt

@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* body {
+  font-family: "Inter", sans-serif;
+  @apply text-gray-900;
+} */
+
+img {
+  animation: 1s appear;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+}
+
+::-webkit-scrollbar {
+  @apply bg-slate-200 w-3;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-md border-solid border-slate-200 bg-slate-500;
+}
