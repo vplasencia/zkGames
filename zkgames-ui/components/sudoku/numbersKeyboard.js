@@ -3,7 +3,7 @@ export default function NumbersKeyboard({ updatePosition }) {
     <div className="grid grid-cols-1 place-items-center gap-10">
       <div className="flex justify-center items-center">
         <button onClick={() => updatePosition(0)} className="transition-colors duration-150 py-3 px-5 font-medium rounded-md bg-indigo-500 hover:bg-indigo-600">
-          Erase
+          Erase Number
         </button>
       </div>
       <div className="grid grid-cols-3 gap-3">

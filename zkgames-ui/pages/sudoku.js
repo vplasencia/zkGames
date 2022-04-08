@@ -279,7 +279,7 @@ export default function Sudoku() {
         disabled={loadingStartGameBtn}
       >
         {loadingStartGameBtn && <div className={styles.loader}></div>}
-        <span>Start Game</span>
+        <span>New Game</span>
       </button>
     );
   };
