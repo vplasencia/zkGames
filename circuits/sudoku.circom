@@ -1,7 +1,5 @@
 pragma circom 2.0.0;
 
-include "./utils/comparators.circom";
-
 template Sudoku() {
     signal input unsolved[9][9];
     signal input solved[9][9];
@@ -9,12 +7,12 @@ template Sudoku() {
     // check unsolved is the initial state of solved
 
 
-    var result;
+    var result = 1;
     
     for (var i = 0; i < 9; i++) {
        for (var j = 0; j < 9; j++) {
            if(unsolved[i][j] != 0) {
-            result += unsolved[i][j] - solved[i][j];
+            result *= unsolved[i][j] == solved[i][j];
            }
         }
     }
@@ -22,10 +20,26 @@ template Sudoku() {
     signal resultSignal;
     resultSignal <-- result;
 
-    resultSignal === 0;
+    resultSignal === 1;
 
 
-    // check row
+    // check solved sudoku numbers are >=1 and <=9
+
+    var range = 1;
+    
+    for (var i = 0; i < 9; i++) {
+       for (var j = 0; j < 9; j++) {
+           range *= solved[i][j] >=1 && solved[i][j] <=9;
+        }
+    }
+
+    signal rangeSignal;
+    rangeSignal <-- range;
+
+    rangeSignal === 1;
+
+
+    // check rows of solved sudoku
 
     var hasNumberRow[9][9];
 
@@ -49,7 +63,7 @@ template Sudoku() {
     MultResultRowSignal === 1;
 
 
-    // check column
+    // check columns of solved sudoku
 
     var hasNumberCol[9][9];
 
@@ -73,7 +87,7 @@ template Sudoku() {
     MultResultColSignal === 1;
 
 
-    // check square 
+    // check squares of solved sudoku 
 
     var hasNumberSquare[9][9];
 
