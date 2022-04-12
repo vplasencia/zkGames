@@ -68,25 +68,6 @@ export default function Sudoku() {
     signerOrProvider: provider,
   });
 
-  useContractEvent(
-    {
-      addressOrName: contractAddress.sudokuContract,
-      contractInterface: sudokuContractAbi.abi,
-    },
-    "NewSudokuNFTMinted",
-    (event) => {
-      console.log(event);
-      const from = event[0];
-      const tokenId = event[1];
-      console.log(from, tokenId.toNumber());
-      alert(
-        `Successfully verified! The NFT has been minted and sent to your wallet. You can see the contract here: ${
-          networks[networks.selectedChain].blockExplorerUrls[0]
-        }address/${contractAddress.sudokuContract}`
-      );
-    }
-  );
-
   const updatePosition = (number) => {
     if (selectedPosition.length > 0) {
       if (!sudokuBoolInitial[selectedPosition[0]][selectedPosition[1]]) return;
@@ -165,8 +146,12 @@ export default function Sudoku() {
         calldata[3]
       );
       await txn.wait();
-
       setLoadingVerifyAndMintBtn(false);
+      alert(
+        `Successfully verified! The NFT has been minted and sent to your wallet. You can see the contract here: ${
+          networks[networks.selectedChain].blockExplorerUrls[0]
+        }address/${contractAddress.sudokuContract}`
+      );
     } catch (error) {
       setLoadingVerifyAndMintBtn(false);
       alert("Wrong solution");
