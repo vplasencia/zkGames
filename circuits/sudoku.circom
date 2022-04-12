@@ -4,7 +4,7 @@ template Sudoku() {
     signal input unsolved[9][9];
     signal input solved[9][9];
 
-    // check unsolved is the initial state of solved
+    // check if unsolved is the initial state of solved
 
 
     var result = 1;
@@ -23,7 +23,7 @@ template Sudoku() {
     resultSignal === 1;
 
 
-    // check solved sudoku numbers are >=1 and <=9
+    // check if solved sudoku numbers are >=1 and <=9
 
     var range = 1;
     
@@ -40,6 +40,8 @@ template Sudoku() {
 
 
     // check rows of solved sudoku
+
+    // hasNumberRow[i][j] means that the number j+1 is in the row i
 
     var hasNumberRow[9][9];
 
@@ -65,11 +67,13 @@ template Sudoku() {
 
     // check columns of solved sudoku
 
+    // hasNumberCol[i][j] means that the number i+1 is in the col j
+
     var hasNumberCol[9][9];
 
     for (var i = 0; i < 9; i++) {
        for (var j = 0; j < 9; j++) {
-           hasNumberCol[solved[j][i]-1][i] = 1;
+           hasNumberCol[solved[i][j]-1][j] = 1;
         }
     }
 
@@ -88,6 +92,9 @@ template Sudoku() {
 
 
     // check squares of solved sudoku 
+
+    // hasNumberSquare[i][j] means that the number j+1 is in the square i+1
+    // Squares start from the top to the bottom, from the left to the right and from 1 to 9 both included 
 
     var hasNumberSquare[9][9];
 
