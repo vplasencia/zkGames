@@ -224,9 +224,9 @@ export default function Sudoku() {
         accountQuery.data?.address &&
         data.chain.id.toString() === networks.selectedChain
       ) {
-        board = await contract.generateSudokuBoard();
+        board = await contract.generateSudokuBoard(new Date().toString());
       } else {
-        board = await contractNoSigner.generateSudokuBoard();
+        board = await contractNoSigner.generateSudokuBoard(new Date().toString());
       }
 
       console.log("result", board);
@@ -238,7 +238,17 @@ export default function Sudoku() {
       });
       setSudoku(newArray);
 
-      const temp = [...sudokuBoolInitial];
+      const temp = [
+        [false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false],
+        [false, false, false, false, false, false, false, false, false],
+      ];
       for (let i = 0; i < board.length; i++) {
         for (let j = 0; j < board.length; j++) {
           if (board[i][j] === 0) {
@@ -252,7 +262,7 @@ export default function Sudoku() {
     }
   };
 
-  const renderStartGame = () => {
+  const renderNewGame = () => {
     return (
       <button
         className="flex justify-center items-center disabled:cursor-not-allowed space-x-3 verify-btn text-lg font-medium rounded-md px-5 py-3 w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500"
@@ -283,7 +293,7 @@ export default function Sudoku() {
           </div>
           <div>
             <div className="flex justify-center items-center my-10">
-              {renderStartGame()}
+              {renderNewGame()}
             </div>
             <NumbersKeyboard updatePosition={updatePosition} />
             <div className="flex justify-center items-center my-10">
