@@ -11,7 +11,7 @@ const main = async () => {
   await contract.deployed();
   console.log("Contract deployed to:", contract.address);
 
-  let board = await contract.generateSudokuBoard();
+  let board = await contract.generateSudokuBoard(new Date().toString());
   console.log(board);
 
   // Call the function.

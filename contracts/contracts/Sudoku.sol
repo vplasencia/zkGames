@@ -110,17 +110,30 @@ contract Sudoku is ERC721URIStorage {
         return true;
     }
 
-    function pickRandomBoard() private view returns (uint8[9][9] memory) {
+    function pickRandomBoard(string memory stringTime)
+        private
+        view
+        returns (uint8[9][9] memory)
+    {
         uint256 randPosition = uint256(
             keccak256(
-                abi.encodePacked(block.difficulty, block.timestamp, msg.sender)
+                abi.encodePacked(
+                    block.difficulty,
+                    block.timestamp,
+                    msg.sender,
+                    stringTime
+                )
             )
         ) % sudokuBoardList.length;
         return sudokuBoardList[randPosition];
     }
 
-    function generateSudokuBoard() public view returns (uint8[9][9] memory) {
-        return pickRandomBoard();
+    function generateSudokuBoard(string memory stringTime)
+        public
+        view
+        returns (uint8[9][9] memory)
+    {
+        return pickRandomBoard(stringTime);
     }
 
     function mintSudokuNft() private {

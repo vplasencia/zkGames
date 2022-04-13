@@ -224,9 +224,11 @@ export default function Sudoku() {
         accountQuery.data?.address &&
         data.chain.id.toString() === networks.selectedChain
       ) {
-        board = await contract.generateSudokuBoard();
+        board = await contract.generateSudokuBoard(new Date().toString());
       } else {
-        board = await contractNoSigner.generateSudokuBoard();
+        board = await contractNoSigner.generateSudokuBoard(
+          new Date().toString()
+        );
       }
 
       console.log("result", board);
@@ -309,7 +311,7 @@ export default function Sudoku() {
       return (
         <div className="flex justify-center items-center space-x-3">
           <div className={styles.loader}></div>
-          <div>Generating Sudoku</div>
+          <div>Loading Game</div>
         </div>
       );
     }
