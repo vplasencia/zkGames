@@ -8,9 +8,11 @@ import GameList from "../components/gameList";
 export default function Home() {
   return (
     <div>
-      <span className="flex justify-center items-center mb-10 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500">
-        Discover new zkGames
-      </span>
+      <div className="flex justify-center items-center">
+        <span className="mb-10 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500">
+          Discover new zkGames
+        </span>
+      </div>
       <div>
         <GameList />
       </div>

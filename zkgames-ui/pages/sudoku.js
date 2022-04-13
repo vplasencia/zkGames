@@ -337,8 +337,10 @@ export default function Sudoku() {
       <div className="mb-10">
         <GoBack />
       </div>
-      <div className="flex mx-5 mb-10 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500">
+      <div className="flex">
+      <div className="mx-5 mb-10 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500">
         Sudoku
+      </div>
       </div>
       <div className="flex flex-wrap gap-20 justify-center items-center text-slate-300">
         {renderSudoku()}
