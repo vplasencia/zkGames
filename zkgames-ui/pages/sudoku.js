@@ -224,9 +224,9 @@ export default function Sudoku() {
         accountQuery.data?.address &&
         data.chain.id.toString() === networks.selectedChain
       ) {
-        board = await contract.generateSudokuBoard(new Date().toString());
+        board = await contract.generateSudokuBoard();
       } else {
-        board = await contractNoSigner.generateSudokuBoard(new Date().toString());
+        board = await contractNoSigner.generateSudokuBoard();
       }
 
       console.log("result", board);
