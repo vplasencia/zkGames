@@ -3,10 +3,10 @@
 # Compile the circuit
 circom sudoku.circom --r1cs --wasm --sym --c
 
-# Copy the input file inside the multiplier_js directory
+# Copy the input file inside the sudoku_js directory
 cp input.json sudoku_js/input.json
 
-# Go inside the multiplier_js directory and generate the witness.wtns
+# Go inside the sudoku_js directory and generate the witness.wtns
 cd sudoku_js
 node generate_witness.js sudoku.wasm input.json witness.wtns
 
@@ -15,7 +15,7 @@ cp witness.wtns ../witness.wtns
 cd ..
 
 # Start a new powers of tau ceremony
-snarkjs powersoftau new bn128 12 pot12_0000.ptau -v
+snarkjs powersoftau new bn128 14 pot12_0000.ptau -v
 
 # Contribute to the ceremony
 snarkjs powersoftau contribute pot12_0000.ptau pot12_0001.ptau --name="First contribution" -v
