@@ -1,4 +1,5 @@
 import Head from "next/head";
+import GoBack from "../components/goBack";
 
 export default function About() {
   return (
@@ -11,6 +12,9 @@ export default function About() {
           content="Zero Knowledge Games Platform - About"
         />
       </Head>
+      <div className="mb-10">
+        <GoBack />
+      </div>
       <div className="grid place-items-center">
         <div className="flex justify-center items-center mb-10 text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500">
           zkGames
