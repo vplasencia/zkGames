@@ -30,5 +30,5 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded-md bg-slate-500;
+  @apply rounded-md bg-slate-500 hover:bg-slate-400;
 }
