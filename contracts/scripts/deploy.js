@@ -1,6 +1,6 @@
 const main = async () => {
   const contractFactoryVerifier = await hre.ethers.getContractFactory(
-    "Verifier"
+    "VerifierSudoku"
   );
   const contractVerifier = await contractFactoryVerifier.deploy();
   await contractVerifier.deployed();

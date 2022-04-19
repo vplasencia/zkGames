@@ -1,6 +1,6 @@
 const main = async () => {
   const contractFactoryVerifier = await hre.ethers.getContractFactory(
-    "Verifier"
+    "VerifierSudoku"
   );
   const contractVerifier = await contractFactoryVerifier.deploy();
   await contractVerifier.deployed();
@@ -17,22 +17,22 @@ const main = async () => {
   // Call the function.
   let result = await contractVerifier.verifyProof(
     [
-      "0x2f67012aaf7d231cedc19ffb8bfb257f7e64a979fd802b654cb9578f22ad74c3",
-      "0x0203ee1d9fe12e31516a1def526cbbd347dd0ee156076ae70bf3d59e4f6d8ea9",
+      "0x060c58df1d210c6bd8ae6807bf30ee43b288fc0dbf4ef871999374e115369d48",
+      "0x04a881a4cd64391f10334351da9886aea43f11f4d10f2298bcdab2eab7019f44",
     ],
     [
       [
-        "0x1752b0ab4c3ec509edd3e4dc4c5360fe089fefa0b20ba922cacad28b84efd54c",
-        "0x17783747bc4dd082910ae0d13be0461d1a9357da7c401adea4e392cdbf868af1",
+        "0x0b8e2823a2880264d7cd38ef336c8db28363197335c1e1b66fca47b2b3faf9af",
+        "0x011690cf57d45e31c11d6793852ae7a266247b4185fe7a4f61f368d110bec8fe",
       ],
       [
-        "0x18a85a325d38f37401b77b05a12b430befe056efe00fa8050e0014515918bdb8",
-        "0x0a559b738ec88c8f0e3898a18847f406c4a8cac66b162dfa087f48155a22ae8a",
+        "0x00b43c733d029caf6aa7999dfd133c9d3360548de0ad4d699df8afe60cb11c25",
+        "0x06e512a45be566376fa82e4ca1c3d69b7f053fd88407b2257c8a3c3c556d8f6a",
       ],
     ],
     [
-      "0x05ed253ab5d51b3fea7ddc84ddaad8795e82a14b815ceb9c0287d41a61cedc76",
-      "0x02b2adeae7c1f1784b8f6c20d712b100a9ac52fe307561f5f293cc9679c4e694",
+      "0x2b49d8956e717704a0cbc774d795ea5eb9593f1604ce75645e8b70d6173f43ca",
+      "0x0878d73d3cff739918a54cf4d5bccbd1b04368dc25450420f0c957b37d46f5ca",
     ],
     [
       "0x0000000000000000000000000000000000000000000000000000000000000000",
@@ -124,22 +124,22 @@ const main = async () => {
   // Call the function.
   let txn = await contract.verifySudokuAndMintNft(
     [
-      "0x2f67012aaf7d231cedc19ffb8bfb257f7e64a979fd802b654cb9578f22ad74c3",
-      "0x0203ee1d9fe12e31516a1def526cbbd347dd0ee156076ae70bf3d59e4f6d8ea9",
+      "0x060c58df1d210c6bd8ae6807bf30ee43b288fc0dbf4ef871999374e115369d48",
+      "0x04a881a4cd64391f10334351da9886aea43f11f4d10f2298bcdab2eab7019f44",
     ],
     [
       [
-        "0x1752b0ab4c3ec509edd3e4dc4c5360fe089fefa0b20ba922cacad28b84efd54c",
-        "0x17783747bc4dd082910ae0d13be0461d1a9357da7c401adea4e392cdbf868af1",
+        "0x0b8e2823a2880264d7cd38ef336c8db28363197335c1e1b66fca47b2b3faf9af",
+        "0x011690cf57d45e31c11d6793852ae7a266247b4185fe7a4f61f368d110bec8fe",
       ],
       [
-        "0x18a85a325d38f37401b77b05a12b430befe056efe00fa8050e0014515918bdb8",
-        "0x0a559b738ec88c8f0e3898a18847f406c4a8cac66b162dfa087f48155a22ae8a",
+        "0x00b43c733d029caf6aa7999dfd133c9d3360548de0ad4d699df8afe60cb11c25",
+        "0x06e512a45be566376fa82e4ca1c3d69b7f053fd88407b2257c8a3c3c556d8f6a",
       ],
     ],
     [
-      "0x05ed253ab5d51b3fea7ddc84ddaad8795e82a14b815ceb9c0287d41a61cedc76",
-      "0x02b2adeae7c1f1784b8f6c20d712b100a9ac52fe307561f5f293cc9679c4e694",
+      "0x2b49d8956e717704a0cbc774d795ea5eb9593f1604ce75645e8b70d6173f43ca",
+      "0x0878d73d3cff739918a54cf4d5bccbd1b04368dc25450420f0c957b37d46f5ca",
     ],
     [
       "0x0000000000000000000000000000000000000000000000000000000000000000",

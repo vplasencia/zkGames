@@ -1,6 +1,6 @@
 pragma circom 2.0.0;
 
-include "./utils/comparators.circom";
+include "../node_modules/circomlib/circuits/comparators.circom";
 
 template Sudoku() {
     signal input unsolved[9][9];
