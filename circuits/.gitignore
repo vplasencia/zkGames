@@ -1,6 +1,7 @@
+node_modules
+
 sudoku/sudoku_cpp
 sudoku/sudoku_js
-
 sudoku/sudoku_0000.zkey
 sudoku/sudoku_0001.zkey
 sudoku/sudoku.r1cs
@@ -15,4 +16,18 @@ sudoku/verifier.sol
 sudoku/witness.wtns
 sudoku/parameters.txt
 
-node_modules
+futoshiki/futoshiki_cpp
+futoshiki/futoshiki_js
+futoshiki/futoshiki_0000.zkey
+futoshiki/futoshiki_0001.zkey
+futoshiki/futoshiki.r1cs
+futoshiki/futoshiki.sym
+futoshiki/pot12_0000.ptau
+futoshiki/pot12_0001.ptau
+futoshiki/pot12_final.ptau
+futoshiki/proof.json
+futoshiki/public.json
+futoshiki/verification_key.json
+futoshiki/verifier.sol
+futoshiki/witness.wtns
+futoshiki/parameters.txt
