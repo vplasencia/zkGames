@@ -6,24 +6,6 @@ export default function Cell({
   futoshikiBoolInitial,
   selectedPosition,
 }) {
-  const borderClassStyle = () => {
-    let styleResult =
-      "flex select-none cursor-pointer justify-center items-center text-2xl h-10 w-10 md:h-14 md:w-14 border-2 border-slate-300";
-    // if (col === 0) {
-    //   styleResult += " border-l-4";
-    // }
-    // if (col === 2 || col === 5 || col === 8) {
-    //   styleResult += " border-r-4";
-    // }
-    // if (row === 0 || row === 3 || row === 6) {
-    //   styleResult += " border-t-4";
-    // }
-    // if (row === 8) {
-    //   styleResult += " border-b-4";
-    // }
-    return styleResult;
-  };
-
   const positionClick = () => {
     if (selectedPosition.length > 0) {
       document
@@ -56,7 +38,7 @@ export default function Cell({
   return (
     <div
       id={row.toString() + col.toString()}
-      className={borderClassStyle()}
+      className="flex select-none cursor-pointer justify-center items-center text-2xl h-10 w-10 md:h-14 md:w-14 border-2 border-slate-300"
       onClick={positionClick}
     >
       {renderCell()}
