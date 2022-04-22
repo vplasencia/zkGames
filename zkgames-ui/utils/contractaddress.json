@@ -1,4 +1,5 @@
 {
  "sudokuContract" :"0xcFD36adc7D2C798AC1e5078dE16dbcC517E7E7Cd",   
- "futoshikiContract" :"0x44D0Ac6dA489dFe5a125b082B820eF1191945366"   
+ "futoshikiContract" :"0x44D0Ac6dA489dFe5a125b082B820eF1191945366",
+ "skyscrapersContract" :"0x072d65e740f964253bDB334b8bf28b2903b5a793"   
 }

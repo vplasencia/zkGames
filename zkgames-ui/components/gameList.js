@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import GameCard from "./gameCard";
 import sudokuImage from "../assets/sudoku.png";
 import futoshikiImage from "../assets/futoshiki.png";
+import skyscrapersImage from "../assets/skyscrapers.png";
 
 export default function GameList() {
   const [gameList, setGameList] = useState([
@@ -14,6 +15,11 @@ export default function GameList() {
       nameGame: "Futoshiki",
       imageGame: futoshikiImage,
       urlGame: "/futoshiki",
+    },
+    {
+      nameGame: "Skyscrapers",
+      imageGame: skyscrapersImage,
+      urlGame: "/skyscrapers",
     },
   ]);
 
