@@ -230,7 +230,7 @@ export default function Skyscrapers() {
         accountQuery.data?.address &&
         data.chain.id.toString() === networks.selectedChain
       ) {
-        board = await contract.generateFSkyscrapersBoard(new Date().toString());
+        board = await contract.generateSkyscrapersBoard(new Date().toString());
       } else {
         board = await contractNoSigner.generateSkyscrapersBoard(
           new Date().toString()
