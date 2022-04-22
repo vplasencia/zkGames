@@ -14,7 +14,7 @@ export default function Board({
       <div className="grid grid-cols-1">
         {subset.map((value, i) => (
           <div
-            className="flex select-none justify-center items-center text-2xl h-10 w-10 md:h-14 md:w-14 space-x-2"
+            className="flex select-none justify-center items-center text-2xl h-10 w-10 md:h-14 md:w-14 md:space-x-2"
             key={i}
           >
             <div>{value !== 0 && value}</div>
@@ -50,7 +50,7 @@ export default function Board({
         {subset.map((value, i) => (
           <div
             key={i}
-            className="flex select-none justify-center items-center text-2xl h-10 w-10 md:h-14 md:w-14 space-x-2"
+            className="flex select-none justify-center items-center text-2xl h-10 w-10 md:h-14 md:w-14 md:space-x-2"
           >
             {value !== 0 && (
               <div>
@@ -86,7 +86,7 @@ export default function Board({
         {subset.map((value, i) => (
           <div
             key={i}
-            className="grid grid-cols-1 select-none justify-center items-center text-2xl h-10 w-10 md:h-14 md:w-14 mb-4 space-y-2"
+            className="grid grid-cols-1 select-none justify-center items-center text-2xl h-10 w-10 md:h-14 md:w-14 mb-5 md:mb-4 md:space-y-2"
           >
             <div className="flex justify-center items-center">
               {value !== 0 && value}
@@ -123,7 +123,7 @@ export default function Board({
         {subset.map((value, i) => (
           <div
             key={i}
-            className="grid grid-cols-1 select-none justify-center items-center text-2xl h-10 w-10 md:h-14 md:w-14 mt-2 space-y-2"
+            className="grid grid-cols-1 select-none justify-center items-center text-2xl h-10 w-10 md:h-14 md:w-14 mt-1 md:mt-2 md:space-y-2"
           >
             {value !== 0 && (
               <div className="flex justify-center items-center">
