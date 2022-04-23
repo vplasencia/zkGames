@@ -66,7 +66,8 @@ export default function Futoshiki() {
 
   const updatePosition = (number) => {
     if (selectedPosition.length > 0) {
-      if (!futoshikiBoolInitial[selectedPosition[0]][selectedPosition[1]]) return;
+      if (!futoshikiBoolInitial[selectedPosition[0]][selectedPosition[1]])
+        return;
       const temp = [...futoshiki];
       temp[selectedPosition[0]][selectedPosition[1]] = number;
       setFutoshiki(temp);
@@ -78,7 +79,11 @@ export default function Futoshiki() {
     setLoadingVerifyBtn(true);
     console.log("futoshikiInitial", futoshikiInitial);
     console.log("futoshiki", futoshiki);
-    let calldata = await futoshikiCalldata(futoshikiInitial, futoshiki, futoshikiInequalitiesInitial);
+    let calldata = await futoshikiCalldata(
+      futoshikiInitial,
+      futoshiki,
+      futoshikiInequalitiesInitial
+    );
 
     if (!calldata) {
       setLoadingVerifyBtn(false);
@@ -125,7 +130,11 @@ export default function Futoshiki() {
     setLoadingVerifyAndMintBtn(true);
     console.log("futoshikiInitial", futoshikiInitial);
     console.log("futoshiki", futoshiki);
-    let calldata = await futoshikiCalldata(futoshikiInitial, futoshiki, futoshikiInequalitiesInitial);
+    let calldata = await futoshikiCalldata(
+      futoshikiInitial,
+      futoshiki,
+      futoshikiInequalitiesInitial
+    );
 
     if (!calldata) {
       setLoadingVerifyAndMintBtn(false);
@@ -231,7 +240,7 @@ export default function Futoshiki() {
 
       setFutoshikiInitial(board[0]);
       setFutoshikiInequalitiesInitial(board[1]);
-      
+
       console.log("inequalities: ", board[1]);
 
       let newArray = board[0].map((arr) => {
@@ -340,6 +349,33 @@ export default function Futoshiki() {
       </div>
       <div className="flex flex-wrap gap-20 justify-center items-center text-slate-300">
         {renderFutoshiki()}
+      </div>
+      <div className="flex place-content-center mt-20 text-lg text-slate-300">
+        <div className="md:w-6/12">
+          <div className="text-center my-5 font-semibold">Futoshiki rules:</div>
+          <div className="space-y-5">
+            <p>
+              <span className="font-semibold">Futoshiki</span> (from Japanese,
+              literally &quot;not equal&quot;; also known as
+              &quot;Hutoshiki&quot;, &quot;Unequal&quot;) is a logic puzzle. The
+              puzzle is played on a square grid, such as 4 x 4.
+            </p>
+            <ul className="list-disc space-y-2">
+              <li>
+                The objective is to place the numbers 1 to 4 (or whatever the
+                dimensions are) in each row, ensuring that each column also only
+                contains the digits 1 to 4.
+              </li>
+              <li>Some digits may be given at the start.</li>
+              <li>
+                Inequality constraints are also initially specifed between some
+                of the squares, such that one must be higher or lower than its
+                neighbour. These constraints must be honoured as the grid is
+                filled out.
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );

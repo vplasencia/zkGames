@@ -338,12 +338,38 @@ export default function Sudoku() {
         <GoBack />
       </div>
       <div className="flex">
-      <div className="mx-5 mb-10 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500">
-        Sudoku
-      </div>
+        <div className="mx-5 mb-10 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500">
+          Sudoku
+        </div>
       </div>
       <div className="flex flex-wrap gap-20 justify-center items-center text-slate-300">
         {renderSudoku()}
+      </div>
+      <div className="flex place-content-center mt-20 text-lg text-slate-300">
+        <div className="md:w-6/12">
+          <div className="text-center my-5 font-semibold">Sudoku rules:</div>
+          <div className="space-y-5">
+            <p>
+              <span className="font-semibold">Sudoku</span> (also known as
+              &quot;Number Place&quot;) is a placement puzzle. The puzzle is
+              most frequently a 9 x 9 grid made up of 3 x 3 subgrids (called
+              &quot;regions&quot;). Some cells already contain numbers, known as
+              &quot;givens&quot;.
+            </p>
+            <ul className="list-disc space-y-2">
+              <li>
+                The goal is to fill in the empty cells, one number in each, so
+                that each column, row, and region contains the numbers 1 through
+                9 exactly once.
+              </li>
+              <li>
+                Each number in the solution therefore occurs only once in each
+                of three &quot;directions&quot;, hence the &quot;single
+                numbers&quot; implied by the puzzle&apos;s name.
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );

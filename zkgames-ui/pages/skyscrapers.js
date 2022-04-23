@@ -33,8 +33,7 @@ let skyscrapersBoolInitialTemp = [
 
 export default function Skyscrapers() {
   const [skyscrapersInitial, setSkyscrapersInitial] = useState([]);
-  const [skyscrapersAmountInitial, setSkyscrapersAmountInitial] =
-    useState([]);
+  const [skyscrapersAmountInitial, setSkyscrapersAmountInitial] = useState([]);
   const [skyscrapers, setSkyscrapers] = useState([]);
   const [skyscrapersBoolInitial, setSkyscrapersBoolInitial] = useState(
     skyscrapersBoolInitialTemp
@@ -351,6 +350,29 @@ export default function Skyscrapers() {
       </div>
       <div className="flex flex-wrap gap-20 justify-center items-center text-slate-300">
         {renderSkyscrapers()}
+      </div>
+      <div className="flex place-content-center mt-20 text-lg text-slate-300">
+        <div className="md:w-6/12">
+          <div className="text-center my-5 font-semibold">
+            Skyscrapers rules:
+          </div>
+          <div className="space-y-5">
+            <p>
+              <span className="font-semibold">Skyscrapers</span> consists of a
+              square grid. The goal is to fill in each cell with numbers from 1
+              to N, where N is the size of the puzzle&apos;s side.
+            </p>
+            <ul className="list-disc space-y-2">
+              <li>No number may appear twice in any row or column.</li>
+              <li>
+                The numbers along the edge of the puzzle indicate the number of
+                buildings which you would see from that direction if there was a
+                series of skyscrapers with heights equal the entries in that row
+                or column.
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
