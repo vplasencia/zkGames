@@ -356,7 +356,7 @@ export default function Sudoku() {
               &quot;regions&quot;). Some cells already contain numbers, known as
               &quot;givens&quot;.
             </p>
-            <ul className="list-disc space-y-2">
+            <ul className="list-disc space-y-2 pl-5">
               <li>
                 The goal is to fill in the empty cells, one number in each, so
                 that each column, row, and region contains the numbers 1 through

@@ -360,7 +360,7 @@ export default function Futoshiki() {
               &quot;Hutoshiki&quot;, &quot;Unequal&quot;) is a logic puzzle. The
               puzzle is played on a square grid, such as 4 x 4.
             </p>
-            <ul className="list-disc space-y-2">
+            <ul className="list-disc space-y-2 pl-5">
               <li>
                 The objective is to place the numbers 1 to 4 (or whatever the
                 dimensions are) in each row, ensuring that each column also only

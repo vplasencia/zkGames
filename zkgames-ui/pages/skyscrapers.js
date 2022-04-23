@@ -362,7 +362,7 @@ export default function Skyscrapers() {
               square grid. The goal is to fill in each cell with numbers from 1
               to N, where N is the size of the puzzle&apos;s side.
             </p>
-            <ul className="list-disc space-y-2">
+            <ul className="list-disc space-y-2 pl-5">
               <li>No number may appear twice in any row or column.</li>
               <li>
                 The numbers along the edge of the puzzle indicate the number of
