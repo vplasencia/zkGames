@@ -1,6 +1,7 @@
 # zkGames <!-- omit in toc -->
 
-![zkgames Image](https://github.com/vplasencia/zkGames/blob/main/zkgames-ui/public/socialMedia.png)
+![zkGamesRepoImage](https://user-images.githubusercontent.com/52170174/164951489-8f3d9b0a-4334-4dfb-b0d6-b6a87ff81424.png)
+
 
 zkGames is a platform that allows users to play zk (zero knowledge) games and mint an NFT as proof that they have won.
 
