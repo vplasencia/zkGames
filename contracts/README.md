@@ -2,6 +2,8 @@
 
 This folder was generated using [Hardhat](https://github.com/NomicFoundation/hardhat) and contains all the smart contracts used in the zkGames application.
 
+There are 3 folders inside the contracts folder, one folder per game. Each game has two smart contracts: one contract for game logic (generate boards, verify boards, mint NFT) and another contract to verify the zk proof (this contract was generated using snarkjs).
+
 ## Install dependencies
 
 ```console

@@ -2,6 +2,10 @@
 
 This folder contains all the [circom circuits](https://github.com/iden3/circom) used in the zkGames application.
 
+There are 3 circom circuits. There is a circuit for each game: `futoshiki.circom`, `skyscrapers.circom`, `sudoku.circom`.
+
+Each folder contains all the information required for a game, so there is one folder per game.
+
 ## Install dependencies
 
 To install all the dependencies run:

@@ -6,6 +6,8 @@ zkGames is a platform that allows users to play zk (zero knowledge) games and mi
 
 The project is currently on [Harmony Testnet](https://explorer.pops.one/) and the frontend is hosted on [Vercel](https://github.com/vercel/vercel).
 
+zkGames has 3 games so far: Futoshiki, Skyscrapers and Sudoku.
+
 zkGames Link:
 
 <https://zkgames.vercel.app/>
@@ -22,7 +24,12 @@ zkGames Link:
   - [Run circuits](#run-circuits)
   - [Run contracts](#run-contracts)
   - [Run zkgames-ui](#run-zkgames-ui)
-- [Add New Game](#add-new-game)
+- [Steps to Add a New Game](#steps-to-add-a-new-game)
+- [Some Images of the zkGames Application](#some-images-of-the-zkgames-application)
+  - [Initial page](#initial-page)
+  - [Futoshiki Game](#futoshiki-game)
+  - [Skyscrapers Game](#skyscrapers-game)
+  - [Sudoku Game](#sudoku-game)
 
 ## Project Structure
 
@@ -52,7 +59,7 @@ To learn more about the zkGames frontend, read the [README file](/zkgames-ui/REA
 
 ## Zero Knowledge Structure
 
-The following graphic shows the structure of the most important elements of the zkGames project.
+The following graphic shows the structure of the most important zero knowledge elements of the zkGames project.
 
 ```text
 ├── circuits
@@ -133,4 +140,47 @@ cd zkgames-ui
 
 Then, follow the intructions in the [README file](/zkgames-ui/README.md) in the `zkgames-ui` folder.
 
-## Add New Game
+## Steps to Add a New Game
+
+Steps to follow to add a new game (in each step you can check how is done with the other games):
+
+1\. **Create the required circom circuits:**
+
+- Inside the circuits folder, create a new folder and inside the new folder, create the necessary circom circuits.
+- Compile the circuit and generate the `wasm`, `zkey` and `verifier.sol` files using the `execute.sh` file.
+
+2\. **Create the necessary smart contracts:**
+
+- Inside the `contracts/contracts` folder, create a new folder with the necessary smart contracts. Add here the verifier.sol generated before using snarkjs.
+- Change the solidity version to `^0.8.4` (it is the version used in the other smart contracts) and the contract name (to `<gameName>Verifier`) in `verifier.sol`.
+- Test the functionalities of the new smart contracts in `scripts/run.js`. Deploy smart contracts.
+
+3\. **Create the user interface of the game:**
+
+- Inside `zkgames-ui/components`, add a new folder to create all the components needed to render the game.
+- Add a new page inside `zkgames-ui/pages` to access the new game.
+- Create the css of that page inside `zkgames-ui/styles`, called `<GameName>.module.css`.
+- Add an image inside `zkgames-ui/assets` to represent the game (width: 700 pixels and height: 700 pixels).
+- Inside `zkgames-ui/public/zkproof` add a new folder with the wasm and zkey elements generated before.
+- Inside `zkgames-ui/utils/abiFiles`, add a new folder with the `json` abi file of the smart contract.
+- In `zkgames-ui/utils/contractaddress.json`, add the new contract address.
+- In `zkgames-ui/zkproof`, create a new folder and inside the new folder create a new file called `snarkjs<NewGame>.js` with the code to export the call data.
+- In `zkgames-ui/components/gameList.js` add the game as follows:
+
+```javascript
+ {
+   nameGame: "<nameGame>",
+   imageGame: nameGameImage,
+   urlGame: "/<nameGame>",
+ }
+```
+
+## Some Images of the zkGames Application
+
+### Initial page
+
+### Futoshiki Game
+
+### Skyscrapers Game
+
+### Sudoku Game
