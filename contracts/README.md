@@ -35,3 +35,15 @@ npx hardhat run scripts/deploy.js --network harmonyTestnet
 ```console
 npx hardhat test
 ``` -->
+
+## Futoshiki contracts graph
+
+![futoshikiContractGraph](https://user-images.githubusercontent.com/52170174/164951666-c0b74a7d-17e9-45e0-a960-b267d9c1d6f7.svg)
+
+## Skyscrapers contracts graph
+
+![skyscrapersContractGraph](https://user-images.githubusercontent.com/52170174/164951736-55b28772-b09f-4972-b1ad-5806ca1ccc17.svg)
+
+## Sudoku contracts graph
+
+![sudokuContractGraph](https://user-images.githubusercontent.com/52170174/164951740-416b7009-b2b6-4f1f-b8b5-79ff52ad2530.svg)
