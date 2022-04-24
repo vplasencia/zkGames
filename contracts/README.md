@@ -6,13 +6,13 @@ There are 3 folders inside the contracts folder, one folder per game. Each game 
 
 ## Install dependencies
 
-```console
+```bash
 yarn install
 ```
 
 ## Run the functionalities of the application
 
-```console
+```bash
 npx hardhat run scripts/run.js
 ```
 
@@ -28,13 +28,13 @@ where `yourPrivateKey` is the private key of your wallet.
 
 To deploy on Harmony Testnet run:
 
-```console
+```bash
 npx hardhat run scripts/deploy.js --network harmonyTestnet
 ```
 
 <!-- ## Run tests
 
-```console
+```bash
 npx hardhat test
 ``` -->
 

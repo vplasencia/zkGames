@@ -10,7 +10,7 @@ Each folder contains all the information required for a game, so there is one fo
 
 To install all the dependencies run:
 
-```console
+```bash
 yarn install
 ```
 
@@ -22,12 +22,12 @@ To compile and run the circuits, go inside each folder.
 
 Run the first time:
 
-```console
+```bash
 chmod u+x execute.sh
 ```
 
 And after that, you can always run:
 
-```console
+```bash
 ./execute.sh
 ```

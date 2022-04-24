@@ -6,13 +6,13 @@ The frontend is a [Next.js](https://nextjs.org/) project bootstrapped with [`cre
 
 ## Install dependencies
 
-```console
+```bash
 yarn install
 ```
 
 ## Run the development server
 
-```console
+```bash
 yarn dev
 ```
 

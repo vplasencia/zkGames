@@ -106,7 +106,7 @@ The following graphic shows the structure of the most important zero knowledge e
 
 ### Clone the Repository
 
-```console
+```bash
 git clone https://github.com/vplasencia/zkGames.git
 ```
 
@@ -114,7 +114,7 @@ git clone https://github.com/vplasencia/zkGames.git
 
 To run cicuits, go inside the `circuits` folder:
 
-```console
+```bash
 cd circuits
 ```
 
@@ -124,7 +124,7 @@ Then, follow the intructions in the [README file](/circuits/README.md) in the `c
 
 To run contracts, go inside the `contracts` folder:
 
-```console
+```bash
 cd contracts
 ```
 
@@ -134,7 +134,7 @@ Then, follow the intructions in the [README file](/contracts/README.md) in the `
 
 To run the frontend, go inside the `zkgames-ui` folder:
 
-```console
+```bash
 cd zkgames-ui
 ```
 
@@ -190,4 +190,5 @@ Steps to follow to add a new game (in each step you can check how is done with t
 ![SkyscrapersGame](https://user-images.githubusercontent.com/52170174/164957837-959530b8-399b-4551-8a37-145e9ff70e3e.png)
 
 ### Sudoku Game
+
 ![SudokuGame](https://user-images.githubusercontent.com/52170174/164957841-08d9166d-99ba-4dbe-88b1-86a507734e6c.png)
