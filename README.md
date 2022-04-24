@@ -153,7 +153,8 @@ Steps to follow to add a new game (in each step you can check how is done with t
 
 - Inside the `contracts/contracts` folder, create a new folder with the necessary smart contracts. Add here the verifier.sol generated before using snarkjs.
 - Change the solidity version to `^0.8.4` (it is the version used in the other smart contracts) and the contract name (to `<gameName>Verifier`) in `verifier.sol`.
-- Test the functionalities of the new smart contracts in `scripts/run.js`. Deploy smart contracts.
+- Test the functionalities of the new smart contracts in `scripts/run.js`.
+- Update the `contracts/scripts/deploy.js` file and deploy smart contracts.
 
 3\. **Create the user interface of the game:**
 
