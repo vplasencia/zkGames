@@ -2,7 +2,6 @@
 
 ![zkGamesRepoImage](https://user-images.githubusercontent.com/52170174/164951489-8f3d9b0a-4334-4dfb-b0d6-b6a87ff81424.png)
 
-
 zkGames is a platform that allows users to play zk (zero knowledge) games and mint an NFT as proof that they have won.
 
 The project is currently on [Harmony Testnet](https://explorer.pops.one/) and the frontend is hosted on [Vercel](https://github.com/vercel/vercel).
@@ -17,6 +16,7 @@ zkGames Link:
   - [circuits](#circuits)
   - [contracts](#contracts)
   - [zkgames-ui](#zkgames-ui)
+- [Zero Knowledge Structure](#zero-knowledge-structure)
 - [Run Locally](#run-locally)
   - [Clone the Repository](#clone-the-repository)
   - [Run circuits](#run-circuits)
@@ -49,6 +49,10 @@ To learn more about the zkGames smart contracts, read the [README file](/contrac
 The [zkgames-ui folder](/zkgames-ui/) contains the zkGames frontend.
 
 To learn more about the zkGames frontend, read the [README file](/zkgames-ui/README.md) in the `zkgames-ui` folder.
+
+## Zero Knowledge Structure
+
+The following graphic shows the structure of the most important elements of the zkGames project.
 
 ```text
 ├── circuits
