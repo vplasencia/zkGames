@@ -12,6 +12,10 @@ zkGames Link:
 
 <https://zkgames.vercel.app/>
 
+zkGames Demo Video:
+
+https://youtu.be/EpeK3WzmS8Y
+
 ## Table of Contents <!-- omit in toc -->
 
 - [Project Structure](#project-structure)
