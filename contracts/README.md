@@ -10,11 +10,13 @@ There are 3 folders inside the contracts folder, one folder per game. Each game 
 yarn install
 ```
 
-## Run the functionalities of the application
+## Run tests
 
 ```bash
-npx hardhat run scripts/run.js
+npx hardhat test
 ```
+
+When you run tests you will see something like this:
 
 ## Deploy on [Harmony Testnet](https://explorer.pops.one/)
 
@@ -32,11 +34,21 @@ To deploy on Harmony Testnet run:
 npx hardhat run scripts/deploy.js --network harmonyTestnet
 ```
 
-<!-- ## Run tests
+## Deploy on [Harmony Mainnet](https://explorer.harmony.one/)
+
+Create a `.env` file and add to it:
+
+```text
+PRIVATE_KEY=<yourPrivateKey>
+```
+
+where `yourPrivateKey` is the private key of your wallet.
+
+To deploy on Harmony Mainnet run:
 
 ```bash
-npx hardhat test
-``` -->
+npx hardhat run scripts/deploy.js --network harmonyMainnet
+```
 
 ## Futoshiki contracts graph
 

@@ -4,7 +4,9 @@
 
 zkGames is a platform that allows users to play zk (zero knowledge) games and mint an NFT as proof that they have won.
 
-The project is currently on [Harmony Testnet](https://explorer.pops.one/) and the frontend is hosted on [Vercel](https://github.com/vercel/vercel).
+<!-- The project is currently on [Harmony Testnet](https://explorer.pops.one/) and the frontend is hosted on [Vercel](https://github.com/vercel/vercel). -->
+
+The project is currently on [Harmony Mainnet](https://explorer.harmony.one/) and the frontend is hosted on [Vercel](https://github.com/vercel/vercel).
 
 zkGames has 3 games so far: Futoshiki, Skyscrapers and Sudoku.
 
