@@ -1,5 +1,5 @@
 {
- "sudokuContract" :"0xf8F128fac54558FeDF94c75b8072339D098Ed698",   
- "futoshikiContract" :"0x4c7036B79165C88Ed31B2F4F32a0126f760c1dEe",
- "skyscrapersContract" :"0x48F4e2CD1eF87685DEC346e181862731998Dbd73"   
+  "sudokuContract": "0x6F24BBF00E2CC56E43B63A70BfFa617A9CE36c56",
+  "futoshikiContract": "0x75C1d3edfc5A48DAd2a07C585638ecD953720918",
+  "skyscrapersContract": "0xd6577A5A3B9fed517D6f29556d5d8D29e998b09c"
 }
