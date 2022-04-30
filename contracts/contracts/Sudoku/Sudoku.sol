@@ -1,13 +1,12 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.4;
 
-import "hardhat/console.sol";
+// import "hardhat/console.sol";
 
 // Import the OpenZeppeling Contracts
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/Base64.sol";
-import "hardhat/console.sol";
 
 interface IVerifier {
     function verifyProof(
@@ -83,10 +82,10 @@ contract Sudoku is ERC721URIStorage {
         returns (bool)
     {
         bool isEqual = true;
-        for (uint256 i = 0; i < sudokuBoardList.length; i++) {
+        for (uint256 i = 0; i < sudokuBoardList.length; ++i) {
             isEqual = true;
-            for (uint256 j = 0; j < sudokuBoardList[i].length; j++) {
-                for (uint256 k = 0; k < sudokuBoardList[i][j].length; k++) {
+            for (uint256 j = 0; j < sudokuBoardList[i].length; ++j) {
+                for (uint256 k = 0; k < sudokuBoardList[i][j].length; ++k) {
                     if (board[9 * j + k] != sudokuBoardList[i][j][k]) {
                         isEqual = false;
                         break;
@@ -162,16 +161,16 @@ contract Sudoku is ERC721URIStorage {
             abi.encodePacked("data:application/json;base64,", json)
         );
 
-        console.log("\n--------------------");
-        console.log(
-            string(
-                abi.encodePacked(
-                    "https://nftpreview.0xdev.codes/?code=",
-                    finalTokenUri
-                )
-            )
-        );
-        console.log("--------------------\n");
+        // console.log("\n--------------------");
+        // console.log(
+        //     string(
+        //         abi.encodePacked(
+        //             "https://nftpreview.0xdev.codes/?code=",
+        //             finalTokenUri
+        //         )
+        //     )
+        // );
+        // console.log("--------------------\n");
 
         _safeMint(msg.sender, newItemId);
 
@@ -179,11 +178,11 @@ contract Sudoku is ERC721URIStorage {
         _setTokenURI(newItemId, finalTokenUri);
 
         _tokenIds.increment();
-        console.log(
-            "An NFT w/ ID %s has been minted to %s",
-            newItemId,
-            msg.sender
-        );
+        // console.log(
+        //     "An NFT w/ ID %s has been minted to %s",
+        //     newItemId,
+        //     msg.sender
+        // );
     }
 
     function verifySudokuAndMintNft(

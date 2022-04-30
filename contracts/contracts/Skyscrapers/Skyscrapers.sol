@@ -1,13 +1,12 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.4;
 
-import "hardhat/console.sol";
+// import "hardhat/console.sol";
 
 // Import the OpenZeppeling Contracts
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/Base64.sol";
-import "hardhat/console.sol";
 
 interface IVerifier {
     function verifyProof(
@@ -85,13 +84,13 @@ contract Skyscrapers is ERC721URIStorage {
         returns (bool)
     {
         bool isEqual = true;
-        for (uint256 i = 0; i < skyscrapersBoardList.length; i++) {
+        for (uint256 i = 0; i < skyscrapersBoardList.length; ++i) {
             isEqual = true;
-            for (uint256 j = 0; j < skyscrapersBoardList[i].length; j++) {
+            for (uint256 j = 0; j < skyscrapersBoardList[i].length; ++j) {
                 for (
                     uint256 k = 0;
                     k < skyscrapersBoardList[i][j].length;
-                    k++
+                    ++k
                 ) {
                     if (input[5 * j + k] != skyscrapersBoardList[i][j][k]) {
                         isEqual = false;
@@ -115,12 +114,12 @@ contract Skyscrapers is ERC721URIStorage {
     {
         bool isEqual = true;
         uint256 k = 25;
-        for (uint256 i = 0; i < skyscrapersAmountList[pos].length; i++) {
+        for (uint256 i = 0; i < skyscrapersAmountList[pos].length; ++i) {
             if (input[k] != skyscrapersAmountList[pos][i]) {
                 isEqual = false;
                 break;
             }
-            k++;
+            ++k;
         }
         return isEqual;
     }
@@ -190,16 +189,16 @@ contract Skyscrapers is ERC721URIStorage {
             abi.encodePacked("data:application/json;base64,", json)
         );
 
-        console.log("\n--------------------");
-        console.log(
-            string(
-                abi.encodePacked(
-                    "https://nftpreview.0xdev.codes/?code=",
-                    finalTokenUri
-                )
-            )
-        );
-        console.log("--------------------\n");
+        // console.log("\n--------------------");
+        // console.log(
+        //     string(
+        //         abi.encodePacked(
+        //             "https://nftpreview.0xdev.codes/?code=",
+        //             finalTokenUri
+        //         )
+        //     )
+        // );
+        // console.log("--------------------\n");
 
         _safeMint(msg.sender, newItemId);
 
@@ -207,11 +206,11 @@ contract Skyscrapers is ERC721URIStorage {
         _setTokenURI(newItemId, finalTokenUri);
 
         _tokenIds.increment();
-        console.log(
-            "An NFT w/ ID %s has been minted to %s",
-            newItemId,
-            msg.sender
-        );
+        // console.log(
+        //     "An NFT w/ ID %s has been minted to %s",
+        //     newItemId,
+        //     msg.sender
+        // );
     }
 
     function verifySkyscrapersAndMintNft(
