@@ -31,7 +31,7 @@ export default function Layout({ children }) {
           property="twitter:description"
           content="Zero Knowledge Games Platform"
         />
-        <meta property="twitter:image" content="/socialMedia.png" />
+        <meta property="twitter:image" content="https://zkgames.vercel.app/socialMedia.png" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" key="ogtype" />
@@ -40,7 +40,7 @@ export default function Layout({ children }) {
           content="https://zkgames.vercel.app/"
           key="ogurl"
         />
-        <meta property="og:image" content="/socialMedia.png" key="ogimage" />
+        <meta property="og:image" content="https://zkgames.vercel.app/socialMedia.png" key="ogimage" />
         <meta property="og:title" content="zkGames" key="ogtitle" />
         <meta
           property="og:description"
