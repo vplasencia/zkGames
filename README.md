@@ -12,7 +12,7 @@ zkGames has 3 games so far: Futoshiki, Skyscrapers and Sudoku.
 
 zkGames Link:
 
-<https://zkgames.vercel.app/>
+<https://zkgames.one/>
 
 zkGames Demo Video:
 
