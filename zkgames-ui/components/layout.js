@@ -25,22 +25,25 @@ export default function Layout({ children }) {
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://zkgames.vercel.app/" />
+        <meta property="twitter:url" content="https://zkgames.one/" />
         <meta property="twitter:title" content="zkGames" />
         <meta
           property="twitter:description"
           content="Zero Knowledge Games Platform"
         />
-        <meta property="twitter:image" content="https://zkgames.vercel.app/socialMedia.png" />
+        <meta
+          property="twitter:image"
+          content="https://zkgames.one/socialMedia.png"
+        />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" key="ogtype" />
+        <meta property="og:url" content="https://zkgames.one/" key="ogurl" />
         <meta
-          property="og:url"
-          content="https://zkgames.vercel.app/"
-          key="ogurl"
+          property="og:image"
+          content="https://zkgames.one/socialMedia.png"
+          key="ogimage"
         />
-        <meta property="og:image" content="https://zkgames.vercel.app/socialMedia.png" key="ogimage" />
         <meta property="og:title" content="zkGames" key="ogtitle" />
         <meta
           property="og:description"
