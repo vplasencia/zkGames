@@ -16,7 +16,7 @@ zkGames Link:
 
 zkGames Demo Video:
 
-https://youtu.be/EpeK3WzmS8Y
+<https://youtu.be/EpeK3WzmS8Y>
 
 ## Table of Contents <!-- omit in toc -->
 
