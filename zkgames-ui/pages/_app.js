@@ -1,11 +1,14 @@
 import Layout from "../components/layout";
 import "../styles/globals.css";
+import PlausibleProvider from "next-plausible";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <PlausibleProvider domain="zkgames.one">
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </PlausibleProvider>
   );
 }
 
