@@ -1,9 +1,9 @@
-//SPDX-License-Identifier: Unlicense
+//SPDX-License-Identifier: Unlicensed
 pragma solidity ^0.8.4;
 
 // import "hardhat/console.sol";
 
-// Import the OpenZeppeling Contracts
+// Import the OpenZeppelin Contracts
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/Base64.sol";
@@ -17,7 +17,7 @@ interface IVerifier {
     ) external view returns (bool);
 }
 
-// Inherit the Open Zeppelin contract imported so we can have access to the inherited contract methods
+// Inherit the OpenZeppelin contract imported so we can have access to the inherited contract methods
 contract Sudoku is ERC721URIStorage {
     address public verifierAddr;
 
@@ -106,7 +106,7 @@ contract Sudoku is ERC721URIStorage {
         uint256[81] memory input
     ) public view returns (bool) {
         require(verifySudokuBoard(input), "This board does not exist");
-        require(verifyProof(a, b, c, input), "Filed proof check");
+        require(verifyProof(a, b, c, input), "Failed proof check");
         return true;
     }
 
@@ -192,7 +192,7 @@ contract Sudoku is ERC721URIStorage {
         uint256[81] memory input
     ) public {
         require(verifySudokuBoard(input), "This board does not exist");
-        require(verifyProof(a, b, c, input), "Filed proof check");
+        require(verifyProof(a, b, c, input), "Failed proof check");
         mintSudokuNft();
     }
 }
