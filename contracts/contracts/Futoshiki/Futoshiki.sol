@@ -1,9 +1,9 @@
-//SPDX-License-Identifier: Unlicense
+//SPDX-License-Identifier: Unlicensed
 pragma solidity ^0.8.4;
 
 // import "hardhat/console.sol";
 
-// Import the OpenZeppeling Contracts
+// Import the OpenZeppelin Contracts
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/Base64.sol";
@@ -151,7 +151,7 @@ contract Futoshiki is ERC721URIStorage {
         uint256[40] memory input
     ) public view returns (bool) {
         require(verifyFutoshikiBoard(input), "This board does not exist");
-        require(verifyProof(a, b, c, input), "Filed proof check");
+        require(verifyProof(a, b, c, input), "Failed proof check");
         return true;
     }
 
@@ -240,7 +240,7 @@ contract Futoshiki is ERC721URIStorage {
         uint256[40] memory input
     ) public {
         require(verifyFutoshikiBoard(input), "This board does not exist");
-        require(verifyProof(a, b, c, input), "Filed proof check");
+        require(verifyProof(a, b, c, input), "Failed proof check");
         mintFutoshikiNft();
     }
 }
