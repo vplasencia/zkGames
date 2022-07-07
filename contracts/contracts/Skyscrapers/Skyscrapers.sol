@@ -3,7 +3,7 @@ pragma solidity ^0.8.4;
 
 // import "hardhat/console.sol";
 
-// Import the OpenZeppeling Contracts
+// Import the OpenZeppelin Contracts
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/Base64.sol";
@@ -17,7 +17,7 @@ interface IVerifier {
     ) external view returns (bool);
 }
 
-// Inherit the Open Zeppelin contract imported so we can have access to the inherited contract methods
+// Inherit the OpenZeppelin contract imported so we can have access to the inherited contract methods
 contract Skyscrapers is ERC721URIStorage {
     address public verifierAddr;
 
@@ -131,7 +131,7 @@ contract Skyscrapers is ERC721URIStorage {
         uint256[45] memory input
     ) public view returns (bool) {
         require(verifySkyscrapersBoard(input), "This board does not exist");
-        require(verifyProof(a, b, c, input), "Filed proof check");
+        require(verifyProof(a, b, c, input), "Failed proof check");
         return true;
     }
 
@@ -220,7 +220,7 @@ contract Skyscrapers is ERC721URIStorage {
         uint256[45] memory input
     ) public {
         require(verifySkyscrapersBoard(input), "This board does not exist");
-        require(verifyProof(a, b, c, input), "Filed proof check");
+        require(verifyProof(a, b, c, input), "Failed proof check");
         mintSkyscrapersNft();
     }
 }
